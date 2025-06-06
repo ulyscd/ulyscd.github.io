@@ -35,8 +35,8 @@ body {
 }
 
 .profile-pic {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 12px;
   object-fit: cover;
   object-position: center 30%;
@@ -48,7 +48,7 @@ body {
 }
 
 .profile-pic:hover {
-  transform: scale(1.05);
+  transform: scale(2.05);
 }
 
 nav {
