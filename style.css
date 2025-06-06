@@ -1,20 +1,33 @@
+/* style.css */
+
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
 body {
   font-family: 'IBM Plex Mono', monospace;
-  background-color: #ffffff;
+  background-color: #f4f4f4; /* soft off-white */
   color: #333;
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
 
-.header-with-profile {
+/* Beveled shadow box */
+.main-box {
+  max-width: 800px;
+  margin: 3rem auto;
+  background-color: #ffffff;
   padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Header layout inside main box */
 .header-content {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .profile-pic-small {
@@ -32,6 +45,7 @@ h1 {
 nav {
   margin-top: 1rem;
   display: flex;
+  justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
@@ -45,36 +59,37 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #d5fdd5; /* light natural green highlight */
-}
-
-#about {
-  padding: 2rem;
-}
-
-.intro-box {
-  max-width: 700px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1.25rem;
-  margin-bottom: 2rem;
-  background-color: #f9f9f9;
+  background-color: #d5fdd5; /* natural light green */
 }
 
 h2 {
   font-size: 1.5rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
+/* Intro paragraph styling */
+.intro-box {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.25rem;
+  background-color: #f9f9f9;
+}
+
+/* Columns: Experience, Skills, Tools, Connect */
 .columns {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .columns div {
   flex: 1;
-  min-width: 200px;
+  min-width: 160px;
 }
 
 h3 {
@@ -82,8 +97,13 @@ h3 {
   margin-top: 1rem;
 }
 
+/* Social section becomes a column */
 #social {
-  padding: 2rem;
+  padding: 0;
+}
+
+#social h2 {
+  margin-top: 0;
 }
 
 #social a {
@@ -92,6 +112,7 @@ h3 {
   transition: background-color 0.3s ease;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
+  display: inline-block;
 }
 
 #social a:hover {
