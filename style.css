@@ -115,6 +115,7 @@ h2 {
 .columns div {
   flex: 1;
   min-width: 160px;
+  text-align: center;
 }
 
 h3 {
