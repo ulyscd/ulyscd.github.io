@@ -35,7 +35,7 @@ body {
 
 .profile-frame.top-right {
   position: absolute;
-  top: 0.75rem;
+  top: 1rem;
   right: 1rem;
   padding: 6px;
   background: #fff;
@@ -49,19 +49,18 @@ body {
 }
 
 .profile-pic-large {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 12px;
   object-fit: cover;
   object-position: center 10%;
-  transform: scale(1.25);
   background-color: #fff;
   border: none;
   transition: transform 0.3s ease;
 }
 
 .profile-pic-large:hover {
-  transform: scale(1.28);
+  transform: scale(1.05);
 }
 
 nav {
