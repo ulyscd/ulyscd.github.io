@@ -7,6 +7,11 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+
+  transition: background-image 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .main-box {
@@ -49,6 +54,21 @@ body {
 
 .profile-pic:hover {
   transform: scale(1.07);
+}
+
+.profile-pic:hover ~ nav,
+.profile-pic:hover ~ section,
+.profile-pic:hover ~ footer {
+  display: none;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+.profile-frame:hover ~ body,
+.profile-pic:hover {
+  background-image: url('/resources/imgs/woodcuts_11.jpg');
 }
 
 nav {
