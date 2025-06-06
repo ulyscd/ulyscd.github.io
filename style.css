@@ -38,20 +38,19 @@ body {
 }
 
 .profile-pic-small {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   border-radius: 12px;
   object-fit: cover;
-  object-position: center 20%;
-  border: 2px solid #ddd;
-  padding: 4px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  object-position: center 10%;
+  transform: scale(1.25); 
+  border: none;
+  transition: transform 0.3s ease;
   background-color: #fff;
 }
 
 .profile-pic-small:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
+  transform: scale(1.28); 
 }
 
 h1 {
@@ -76,7 +75,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #d5fdd5; 
+  background-color: #d5fdd5;
 }
 
 h2 {
@@ -99,6 +98,7 @@ h2 {
   padding: 1.25rem;
   background-color: #f9f9f9;
 }
+
 .columns {
   display: flex;
   flex-wrap: wrap;
@@ -108,7 +108,7 @@ h2 {
 }
 
 .bottom-columns {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
