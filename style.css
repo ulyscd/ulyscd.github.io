@@ -40,8 +40,8 @@ body {
 }
 
 .profile-pic {
-  width: 125px;
-  height: 125px;
+  width: 130px;
+  height: 130px;
   border-radius: 12px;
   object-fit: cover;
   object-position: center 30%;
@@ -53,17 +53,13 @@ body {
 }
 
 .profile-pic:hover {
-  transform: scale(1.07);
+  transform: scale(1.08);
 }
 
 .profile-pic:hover ~ nav,
 .profile-pic:hover ~ section,
 .profile-pic:hover ~ footer {
   display: none;
-}
-
-.profile-pic:hover {
-  transform: scale(1.05);
 }
 
 .profile-frame:hover ~ body,
