@@ -1,0 +1,103 @@
+/* style.css */
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.3s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+nav a:hover {
+  background-color: #d5fdd5; /* light natural green highlight */
+}
+
+#hero {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#about {
+  padding: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.columns div {
+  flex: 1;
+  min-width: 200px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+#social {
+  padding: 2rem;
+}
+
+#social a {
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.3s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+#social a:hover {
+  background-color: #d5fdd5;
+}
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+}
