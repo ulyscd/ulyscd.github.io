@@ -170,3 +170,24 @@ footer {
 .project-box a:hover {
   background-color: #d5fdd5;
 }
+
+@media (max-width: 500px) {
+  .main-box {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-pic {
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    word-break: break-word;
+  }
+}
