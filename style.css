@@ -1,6 +1,3 @@
-/* style.css */
-
-/* Import font */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 body {
@@ -12,7 +9,6 @@ body {
   line-height: 1.6;
 }
 
-/* Beveled shadow box */
 .main-box {
   max-width: 800px;
   margin: 3rem auto;
@@ -22,7 +18,6 @@ body {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Header layout inside main box */
 .header-content {
   display: flex;
   align-items: center;
@@ -68,7 +63,6 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* Intro paragraph styling */
 .intro-box {
   max-width: 700px;
   margin: 0 auto 2rem;
@@ -78,7 +72,6 @@ h2 {
   background-color: #f9f9f9;
 }
 
-/* Columns: Experience, Skills, Tools, Connect */
 .columns {
   display: flex;
   flex-wrap: wrap;
@@ -97,7 +90,6 @@ h3 {
   margin-top: 1rem;
 }
 
-/* Social section becomes a column */
 #social {
   padding: 0;
 }
@@ -124,4 +116,20 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   color: #888;
+}
+
+.profile-pic-small {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  padding: 4px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background-color: #fff;
+}
+
+.profile-pic-small:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
