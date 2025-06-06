@@ -128,3 +128,37 @@ footer {
   font-size: 0.9rem;
   color: #888;
 }
+
+/* scholar.html-specific sections */
+
+.project-box {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.project-box ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.project-box li {
+  margin: 0.75rem 0;
+}
+
+.project-box a {
+  text-decoration: none;
+  color: #000;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.project-box a:hover {
+  background-color: #d5fdd5;
+}
