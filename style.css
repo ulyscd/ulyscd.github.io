@@ -9,19 +9,30 @@ body {
   line-height: 1.6;
 }
 
-header {
+.header-with-profile {
   padding: 2rem;
+}
+
+.header-content {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-pic-small {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 h1 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
 nav {
+  margin-top: 1rem;
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
@@ -39,23 +50,17 @@ nav a:hover {
   background-color: #d5fdd5; /* light natural green highlight */
 }
 
-#hero {
-  padding: 2rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 2rem;
-}
-
-.profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
 #about {
   padding: 2rem;
+}
+
+.intro-box {
+  max-width: 700px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  background-color: #f9f9f9;
 }
 
 h2 {
