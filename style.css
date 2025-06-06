@@ -43,10 +43,15 @@ body {
   border-radius: 12px;
   object-fit: cover;
   object-position: center 10%;
-  background-color: transparent;
+  background: none;
   border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
   transition: transform 0.3s ease;
 }
+
 
 .profile-pic-large:hover {
   transform: scale(1.05);
