@@ -113,10 +113,17 @@ nav a:hover {
 }
 
 .portal-icon {
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
   border-radius: 4px;
+}
+
+.youtube-link {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .youtube-link:hover .portal-icon {
@@ -141,6 +148,7 @@ h2 {
 
 .intro-wrapper h2 {
   margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .intro-box {
