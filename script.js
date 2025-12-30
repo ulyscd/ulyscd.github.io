@@ -9,22 +9,20 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Wata.gif background effect on hover for interactive elements
-  const interactiveElements = document.querySelectorAll('.nav-link, .profile-frame, .about-box, .skill-category, .portfolio-toggle');
+  const interactiveElements = document.querySelectorAll('nav a, .profile-frame, .profile-pic, .intro-box, .columns > div, .portfolio-toggle');
   const wataBackground = document.getElementById('wataBackground');
 
-  interactiveElements.forEach(element => {
-    element.addEventListener('mouseenter', function() {
-      if (wataBackground) {
+  if (wataBackground) {
+    interactiveElements.forEach(element => {
+      element.addEventListener('mouseenter', function() {
         wataBackground.classList.add('active');
-      }
-    });
+      });
 
-    element.addEventListener('mouseleave', function() {
-      if (wataBackground) {
+      element.addEventListener('mouseleave', function() {
         wataBackground.classList.remove('active');
-      }
+      });
     });
-  });
+  }
 
   // Smooth scroll behavior
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
