@@ -115,7 +115,7 @@ nav a:hover {
 .portal-icon {
   width: 72px;
   height: 72px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 4px;
 }
 
