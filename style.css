@@ -3,7 +3,7 @@
 :root {
   --off-white: #FAF9F6;
   --beige-light: #F5F5F0;
-  --beige: #E8E4D8;
+  --beige: #f8f5ec;
   --beige-dark: #D4C5B9;
   --matcha-light: #C8D5B9;
   --matcha: #A8C09A;
@@ -113,8 +113,8 @@ nav a:hover {
 }
 
 .portal-icon {
-  width: 32px;
-  height: 32px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
   border-radius: 4px;
 }
