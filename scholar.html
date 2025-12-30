@@ -3,69 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Ulys CD Portfolio]</title>
+  <title>Portfolio | Ulys CD</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="main-box">
-    <header class="header-with-profile">
+  <div class="container">
+    <header class="header">
       <div class="header-content">
-        <div class="profile-frame">
-          <img src="/resources/imgs/sweata.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="profile-section">
+          <div class="profile-frame">
+            <img src="/resources/imgs/sweata.jpg" alt="Ulys Chauncey Drumrongthai" class="profile-pic">
+            <div class="profile-overlay"></div>
+          </div>
+          <h1>Ulys Chauncey Drumrongthai</h1>
+          <p class="pronunciation">(yoo-lis)</p>
         </div>
-        <h1>Ulys Chauncey Drumrongthai</h1>
+        
+        <nav class="social-nav">
+          <a href="index.html" class="nav-link portfolio-link">
+            <span>Home</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ulyscd" target="_blank" class="nav-link" rel="noopener noreferrer">
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.youtube.com/@fihxing" target="_blank" class="nav-link youtube-link" rel="noopener noreferrer">
+            <img src="/resources/imgs/portal.gif" alt="YouTube Portal" class="portal-icon">
+            <span>YouTube</span>
+          </a>
+          <a href="https://www.instagram.com/ulyscd/" target="_blank" class="nav-link" rel="noopener noreferrer">
+            <span>Instagram</span>
+          </a>
+          <a href="https://github.com/ulyscd" target="_blank" class="nav-link" rel="noopener noreferrer">
+            <span>GitHub</span>
+          </a>
+        </nav>
       </div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="https://www.linkedin.com/in/ulyscd" target="_blank">LinkedIn</a>
-        <a href="https://www.youtube.com/@yoomb" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/ulyscd/" target="_blank">Instagram</a>
-      </nav>
     </header>
 
-    <section id="portfolio">
-      <h2>📁 personal projects.</h2>
-      <div class="project-box">
-        <ul>
-          <li><a href="https://github.com/ulyscd/theFourHs" target="_blank">theFourH's - <em>Salmon Populations in Oregon</em></a></li>
-        </ul>
-      </div>
-    </section>
+    <main class="main-content">
+      <section id="portfolio" class="portfolio-section">
+        <h2 class="section-title">Portfolio</h2>
 
-    <section id="classes">
-      <h2>💻 cit 281.</h2>
-      <div class="project-box">
-        <ul>
-          <li><a href="https://github.com/ulyscd/CIT281-p1" target="_blank">Project 1: <em>Command Line Interface Familiarity</em></a></li>
-          <li><a href="https://github.com/ulyscd/CIT281-p2" target="_blank">Project 2: <em>Refactored Project 1 using Git</em></a></li>
-          <li><a href="https://github.com/ulyscd/CIT281-p3" target="_blank">Project 3: <em>US Coin Calculation Tool</em></a></li>
-          <li><a href="https://github.com/ulyscd/CIT281-p4" target="_blank">Project 4: <em>Rest API w/ a "Data Source"</em></a></li>
-          <li><a href="https://github.com/ulyscd/CIT281-p5" target="_blank">Project 5: <em>Turn Based JavaScript Game</em></a></li>
-          <li><a href="https://github.com/ulyscd/CIT281-p6" target="_blank">Project 6: <em>Habit Tracker Web Application</em></a></li>
-        </ul>
-      </div>
-    </section>
+        <!-- Personal Projects -->
+        <div class="portfolio-toggle" data-category="personal">
+          <div class="toggle-header">
+            <span>📁 Personal Projects</span>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="toggle-content">
+            <div class="project-item">
+              <a href="https://github.com/ulyscd/theFourHs" target="_blank" class="project-link" rel="noopener noreferrer">
+                <div class="project-title">theFourH's</div>
+                <div class="project-description">Salmon Populations in Oregon</div>
+              </a>
+            </div>
+            <!-- Add more personal projects here -->
+          </div>
+        </div>
+
+        <!-- Academic/Research Projects -->
+        <div class="portfolio-toggle" data-category="academic">
+          <div class="toggle-header">
+            <span>🔬 Academic & Research Projects</span>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="toggle-content">
+            <!-- Add academic/research projects here -->
+            <div class="project-item">
+              <a href="#" target="_blank" class="project-link" rel="noopener noreferrer">
+                <div class="project-title">Project Title</div>
+                <div class="project-description">Project description and details</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CIT 281 Projects -->
+        <div class="portfolio-toggle" data-category="cit281">
+          <div class="toggle-header">
+            <span>💻 CIT 281</span>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="toggle-content">
+            <div class="project-item">
+              <a href="https://github.com/ulyscd/CIT281-p1" target="_blank" class="project-link" rel="noopener noreferrer">
+                <div class="project-title">Project 1</div>
+                <div class="project-description">Command Line Interface Familiarity</div>
+              </a>
+            </div>
+            <div class="project-item">
+              <a href="https://github.com/ulyscd/CIT281-p2" target="_blank" class="project-link" rel="noopener noreferrer">
+                <div class="project-title">Project 2</div>
+                <div class="project-description">Refactored Project 1 using Git</div>
+              </a>
+            </div>
+            <div class="project-item">
+              <a href="https://github.com/ulyscd/CIT281-p3" target="_blank" class="project-link" rel="noopener noreferrer">
+                <div class="project-title">Project 3</div>
+                <div class="project-description">US Coin Calculation Tool</div>
+              </a>
+            </div>
+            <div class="project-item">
+              <a href="https://github.com/ulyscd/CIT281-p4" target="_blank" class="project-link" rel="noopener noreferrer">
+                <div class="project-title">Project 4</div>
+                <div class="project-description">Rest API w/ a "Data Source"</div>
+              </a>
+            </div>
+            <div class="project-item">
+              <a href="https://github.com/ulyscd/CIT281-p5" target="_blank" class="project-link" rel="noopener noreferrer">
+                <div class="project-title">Project 5</div>
+                <div class="project-description">Turn Based JavaScript Game</div>
+              </a>
+            </div>
+            <div class="project-item">
+              <a href="https://github.com/ulyscd/CIT281-p6" target="_blank" class="project-link" rel="noopener noreferrer">
+                <div class="project-title">Project 6</div>
+                <div class="project-description">Habit Tracker Web Application</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more course sections as needed -->
+        <!-- Example: Other Course Projects -->
+        <div class="portfolio-toggle" data-category="other">
+          <div class="toggle-header">
+            <span>📚 Other Course Projects</span>
+            <span class="toggle-icon">▼</span>
+          </div>
+          <div class="toggle-content">
+            <!-- Add other course projects here -->
+            <div class="project-item">
+              <a href="#" target="_blank" class="project-link" rel="noopener noreferrer">
+                <div class="project-title">Project Title</div>
+                <div class="project-description">Project description and details</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Ulys Chauncey Drumrongthai. Hosted on GitHub Pages.</p>
+    </footer>
   </div>
 
-  <footer id="contact">
-    <p>&copy; 2025 Ulys Chauncey Drumrongthai. Hosted on GitHub Pages.</p>
-  </footer>
+  <div class="wata-background" id="wataBackground"></div>
 
-  <!-- <script>
-  const profilePic = document.querySelector('.profile-pic');
-  const body = document.body;
-
-  profilePic.addEventListener('mouseenter', () => {
-    body.style.backgroundImage = "url('/resources/imgs/woodcuts_11.jpg')";
-    body.style.backgroundSize = "cover";
-    body.style.backgroundRepeat = "no-repeat";
-    body.style.backgroundPosition = "center";
-  });
-
-  profilePic.addEventListener('mouseleave', () => {
-    body.style.backgroundImage = "";
-  });
-</script> -->
+  <script src="script.js"></script>
 </body>
 </html>

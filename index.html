@@ -3,73 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Ulys CD]</title>
+  <title>Ulys CD | Personal Site</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="main-box">
-    <header class="header-with-profile">
+  <div class="container">
+    <header class="header">
       <div class="header-content">
-        <div class="profile-frame">
-          <img src="/resources/imgs/sweata.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="profile-section">
+          <div class="profile-frame">
+            <img src="/resources/imgs/sweata.jpg" alt="Ulys Chauncey Drumrongthai" class="profile-pic">
+            <div class="profile-overlay"></div>
+          </div>
+          <h1>Ulys Chauncey Drumrongthai</h1>
+          <p class="pronunciation">(yoo-lis)</p>
         </div>
-        <h1>Ulys Chauncey Drumrongthai</h1>
+        
+        <nav class="social-nav">
+          <a href="scholar.html" class="nav-link portfolio-link">
+            <span>Portfolio</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ulyscd" target="_blank" class="nav-link" rel="noopener noreferrer">
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.youtube.com/@fihxing" target="_blank" class="nav-link youtube-link" rel="noopener noreferrer">
+            <img src="/resources/imgs/portal.gif" alt="YouTube Portal" class="portal-icon">
+            <span>YouTube</span>
+          </a>
+          <a href="https://www.instagram.com/ulyscd/" target="_blank" class="nav-link" rel="noopener noreferrer">
+            <span>Instagram</span>
+          </a>
+          <a href="https://github.com/ulyscd" target="_blank" class="nav-link" rel="noopener noreferrer">
+            <span>GitHub</span>
+          </a>
+        </nav>
       </div>
-      <nav>
-        <a href="scholar.html">Portfolio</a>
-        <a href="https://www.linkedin.com/in/ulyscd" target="_blank">LinkedIn</a>
-        <a href="https://www.youtube.com/@fihxing" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/ulyscd/" target="_blank">Instagram</a>
-      </nav>
     </header>
 
-    <section id="about">
-      <div class="intro-wrapper">
-        <h2>about.</h2>
-        <div class="intro-box">
-          <p><em>(yoo-lis)</em><br><br>
+    <main class="main-content">
+      <section id="about" class="about-section">
+        <h2 class="section-title">About</h2>
+        <div class="about-box">
+          <p class="about-text">
             Passing linear algebra 🙏 and working on fishing videos.
           </p>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section id="skills" class="skills-section">
+        <h2 class="section-title">Skills & Tools</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="category-title">Languages</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">C</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Frameworks</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Express</span>
+              <span class="skill-tag">Node.js</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Dev Tools</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">Git</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Applications</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Premiere Pro</span>
+              <span class="skill-tag">After Effects</span>
+              <span class="skill-tag">Photoshop</span>
+              <span class="skill-tag">Tableau</span>
+              <span class="skill-tag">Excel</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="category-title">Skills</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Microsoft Business Intelligence (MSBI)</span>
+              <span class="skill-tag">Data Visualization</span>
+              <span class="skill-tag">Motion Graphics</span>
+              <span class="skill-tag">Video Production/Editing</span>
+              <span class="skill-tag">Financial Accounting</span>
+              <span class="skill-tag">Bootstrapping</span>
+              <span class="skill-tag">Muay Thai</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Ulys Chauncey Drumrongthai</p>
+    </footer>
   </div>
 
-  <div class="columns bottom-columns">
-    <div>
-      <h3>skills.</h3>
-      <p>Microsoft Business Intelligence (MSBI.)<br>Data Visualization.<br>Motion Graphics.
-      <br>Video Production/Editing.<br>Financial Accounting.<br>Bootstrapping.<br>Muay Thai.</p>
-    </div>
-    <div>
-      <h3>languages.</h3>
-      <p>Python<br>HTML<br>JavaScript<br>C</p>
-    </div>
-    <div>
-      <h3>tools.</h3>
-      <p>Pr<br>Ae<br>Ps<br>Tableau<br>Excel<br>Postman<br>Express<br>Node.js</p>
-    </div>
-  </div>
+  <div class="wata-background" id="wataBackground"></div>
 
-  <footer id="contact">
-    <p>&copy; 2025 Ulys Chauncey Drumrongthai.</p>
-  </footer>
-
-  <!-- <script>
-  const profilePic = document.querySelector('.profile-pic');
-  const body = document.body;
-
-  profilePic.addEventListener('mouseenter', () => {
-    body.style.backgroundImage = "url('/resources/imgs/woodcuts_11.jpg')";
-    body.style.backgroundSize = "cover";
-    body.style.backgroundRepeat = "no-repeat";
-    body.style.backgroundPosition = "center";
-  });
-
-  profilePic.addEventListener('mouseleave', () => {
-    body.style.backgroundImage = "";
-  });
-</script> -->
+  <script src="script.js"></script>
 </body>
 </html>
