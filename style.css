@@ -211,6 +211,21 @@ h3 {
   color: var(--text-dark);
 }
 
+.columns ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.columns li {
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+.columns li::before {
+  content: '- ';
+}
+
 footer {
   padding: 2rem;
   text-align: center;
