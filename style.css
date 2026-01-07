@@ -114,10 +114,11 @@ nav a:hover {
 
 /* GIF nav icon buttons */
 .nav-icon-link {
-  padding: 0.35rem 0.6rem;
+  padding: 0;
   background-color: transparent;
   box-shadow: none;
   flex-direction: column;
+  border-radius: 0;
 }
 
 .nav-icon-link:hover {
@@ -129,8 +130,13 @@ nav a:hover {
   width: 52px;
   height: 52px;
   object-fit: contain;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px var(--shadow);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.nav-icon--cctv {
+  width: 58px;
+  height: 58px;
 }
 
 .nav-label {

@@ -90,6 +90,10 @@
       word-wrap: break-word;
     }
 
+    .fish-caption.visible {
+      display: block;
+    }
+
     .fish-photo:hover .fish-caption {
       display: block;
     }
@@ -151,13 +155,13 @@
     <header class="header-with-profile">
       <div class="header-content">
         <div class="profile-frame">
-          <img src="/resources/imgs/creek.jpg" alt="Profile Picture" class="profile-pic">
+          <img src="/resources/imgs/creek.jpeg" alt="Profile Picture" class="profile-pic">
         </div>
         <h1>ulys cd.</h1>
       </div>
       <nav>
         <a href="/index.html" class="nav-icon-link">
-          <img src="/resources/imgs/blueearth.gif" alt="Home" class="nav-icon">
+          <img src="/resources/imgs/bluearth.gif" alt="Home" class="nav-icon">
           <span class="nav-label">Home</span>
         </a>
         
@@ -172,12 +176,12 @@
         </a>
 
         <a href="https://www.instagram.com/ulyscd/" target="_blank" rel="noopener noreferrer" class="nav-icon-link">
-          <img src="/resources/imgs/cctv.gif" alt="Instagram" class="nav-icon">
+          <img src="/resources/imgs/cctv.gif" alt="Instagram" class="nav-icon nav-icon--cctv">
           <span class="nav-label">Insta</span>
         </a>
         
         <a href="https://www.youtube.com/@fihxing" target="_blank" rel="noopener noreferrer" class="nav-icon-link">
-          <img src="/resources/imgs/spiral.gif" alt="YouTube" class="nav-icon">
+          <img src="/resources/imgs/portal.gif" alt="YouTube" class="nav-icon">
           <span class="nav-label">Vids</span>
         </a>
       </nav>
@@ -199,7 +203,7 @@
 
     <div class="fish-photo">
       <div class="fish-image-container">
-        <img src="/resources/fih/trout.jpeg" alt="Full freezer">
+        <img src="/resources/fih/trout.jpg" alt="Full freezer">
         <div class="fish-caption">the perfect fly day - end of an era.</div>
       </div>
       <div class="fish-date-caption">Dec. 2025</div>
@@ -351,7 +355,10 @@
 
       fishPhotos.forEach(photo => {
         const caption = photo.querySelector('.fish-caption');
-        if (caption && window.innerWidth > 768) {
+        if (!caption) return;
+
+        if (window.innerWidth > 768) {
+          // Desktop: follow mouse on hover
           photo.addEventListener('mousemove', function(e) {
             const offset = 7;
             let left = e.clientX + offset;
@@ -370,8 +377,32 @@
             caption.style.left = left + 'px';
             caption.style.top = top + 'px';
           });
+        } else {
+          // Mobile: tap to toggle caption
+          photo.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isVisible = caption.classList.contains('visible');
+
+            // Hide any other open captions
+            document.querySelectorAll('.fish-caption.visible').forEach(el => {
+              el.classList.remove('visible');
+            });
+
+            if (!isVisible) {
+              caption.classList.add('visible');
+            }
+          });
         }
       });
+
+      // Close captions when tapping outside on mobile
+      if (window.innerWidth <= 768) {
+        document.addEventListener('click', function() {
+          document.querySelectorAll('.fish-caption.visible').forEach(el => {
+            el.classList.remove('visible');
+          });
+        });
+      }
     });
   </script>
 </body>
