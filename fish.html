@@ -3,59 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>fish. | u!ys.dev</title>
+  <title>fish.pics</title>
   <link rel="stylesheet" href="/style.css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    /* Fish page specific styles */
-    body {
-      background-image: url('/resources/imgs/wata.gif');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-
-    .parallax-banner {
-      height: 300px;
-      background-image: url('/resources/fih/king.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 3rem;
-      overflow: hidden;
-    }
-
-    .parallax-banner::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.3);
-      z-index: 1;
-    }
-
-    .parallax-banner h1 {
-      position: relative;
-      z-index: 2;
-      color: var(--off-white);
-      font-size: 3rem;
-      font-weight: 600;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    }
-
     .fish-timeline {
       max-width: 900px;
       margin: 0 auto;
-      padding: 0 2rem 4rem;
+      padding: 2rem 2rem 4rem;
       position: relative;
       z-index: 1;
+    }
+
+    .fish-timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--matcha-light), var(--matcha), var(--matcha-light));
+      transform: translateX(-50%);
+      z-index: 0;
     }
 
     .fish-photo {
@@ -65,6 +34,11 @@
       padding: 1.5rem;
       box-shadow: 0 6px 16px var(--shadow);
       transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+      max-width: 50%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .fish-photo:hover {
@@ -74,10 +48,11 @@
 
     .fish-image-container {
       width: 100%;
-      margin-bottom: 1rem;
+      margin-bottom: 0;
       border-radius: 8px;
       overflow: hidden;
       background-color: var(--off-white);
+      position: relative;
     }
 
     .fish-image-container img {
@@ -88,48 +63,60 @@
     }
 
     .fish-caption {
-      font-size: 1.1rem;
+      display: none;
+      position: fixed;
+      background-color: var(--beige);
+      border: 1px solid var(--beige-dark);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
       color: var(--text-dark);
       font-style: italic;
-      text-align: center;
-      padding: 0.5rem 0;
+      box-shadow: 0 4px 12px var(--shadow-hover);
+      z-index: 1000;
+      pointer-events: none;
+      max-width: 200px;
+      word-wrap: break-word;
     }
 
-    .wata-background {
-      opacity: 0.15;
+    .fish-photo:hover .fish-caption {
+      display: block;
     }
 
     @media (max-width: 768px) {
-      .parallax-banner {
-        height: 200px;
-      }
-
-      .parallax-banner h1 {
-        font-size: 2rem;
-      }
-
       .fish-timeline {
-        padding: 0 1rem 3rem;
+        padding: 2rem 1rem 3rem;
+      }
+
+      .fish-timeline::before {
+        left: 1rem;
       }
 
       .fish-photo {
-        padding: 1rem;
+        max-width: 85%;
+        margin-left: 2rem;
+        margin-right: auto;
+      }
+
+      .fish-caption {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0.5rem;
+        max-width: 90%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="parallax-banner">
-    <h1>fish.</h1>
-  </div>
-
   <div class="main-box">
     <header class="header-with-profile">
       <div class="header-content">
         <div class="profile-frame">
-          <img src="/resources/imgs/sweata.jpg" alt="Profile Picture" class="profile-pic">
+          <img src="/resources/imgs/creek.jpg" alt="Profile Picture" class="profile-pic">
         </div>
-        <h1>ulys cd.</h1>
+        <h1>fish.</h1>
       </div>
       <nav>
         <a href="/index.html">Home</a>
@@ -137,10 +124,6 @@
         <a href="/scholar.html">Code</a>
 
         <a href="https://github.com/ulyscd" target="_blank" rel="noopener noreferrer">Git</a>
-
-        <a href="/fish.html" class="youtube-link">
-          <img src="/resources/imgs/portal.gif" alt="Fish Portal" class="portal-icon">
-        </a>
 
         <a href="https://www.instagram.com/ulyscd/" target="_blank" rel="noopener noreferrer">Insta</a>
         
@@ -150,76 +133,75 @@
   </div>
 
   <div class="fish-timeline">
-    <!-- Newest at top -->
+
     <div class="fish-photo">
       <div class="fish-image-container">
         <img src="/resources/fih/king.jpg" alt="Full freezer">
+        <div class="fish-caption">full freezer</div>
       </div>
-      <div class="fish-caption">'full freezer'</div>
     </div>
 
     <div class="fish-photo">
       <div class="fish-image-container">
         <img src="/resources/fih/brown.jpg" alt="Pattern pic">
+        <div class="fish-caption">pattern pic</div>
       </div>
-      <div class="fish-caption">'pattern pic'</div>
     </div>
 
     <div class="fish-photo">
       <div class="fish-image-container">
         <img src="/resources/fih/bull.jpg" alt="Alpine bull">
+        <div class="fish-caption">alpine bull</div>
       </div>
-      <div class="fish-caption">'alpine bull'</div>
     </div>
 
     <div class="fish-photo">
       <div class="fish-image-container">
-        <img src="/resources/fih/fallqua.HEIC" alt="Chrome w/ the bro">
+        <img src="/resources/fih/fallqua.jpg" alt="Chrome w/ the bro">
+        <div class="fish-caption">chrome w/ the bro</div>
       </div>
-      <div class="fish-caption">'chrome w/ the bro'</div>
     </div>
 
     <div class="fish-photo">
       <div class="fish-image-container">
         <img src="/resources/fih/twitch.jpg" alt="Full kipe">
+        <div class="fish-caption">full kipe</div>
       </div>
-      <div class="fish-caption">'full kipe'</div>
     </div>
 
     <div class="fish-photo">
       <div class="fish-image-container">
         <img src="/resources/fih/chrome.jpg" alt="let'r g(r)o(w)">
+        <div class="fish-caption">let`r g(r)o(w)</div>
       </div>
-      <div class="fish-caption">'let`r g(r)o(w)'</div>
     </div>
 
     <div class="fish-photo">
       <div class="fish-image-container">
         <img src="/resources/fih/shad.jpg" alt="Mini tarpon">
+        <div class="fish-caption">mini tarpon</div>
       </div>
-      <div class="fish-caption">'mini tarpon'</div>
     </div>
 
     <div class="fish-photo">
       <div class="fish-image-container">
         <img src="/resources/fih/steel.jpg" alt="Chromed steel">
+        <div class="fish-caption">chromed steel</div>
       </div>
-      <div class="fish-caption">'chromed steel'</div>
     </div>
 
     <div class="fish-photo">
       <div class="fish-image-container">
-        <img src="/resources/fih/coho.HEIC" alt="Reignited">
+        <img src="/resources/fih/coho.jpg" alt="Reignited">
+        <div class="fish-caption">reignited</div>
       </div>
-      <div class="fish-caption">'reignited'</div>
     </div>
 
-    <!-- Oldest at bottom -->
     <div class="fish-photo">
       <div class="fish-image-container">
         <img src="/resources/fih/origin.jpg" alt="Conception">
+        <div class="fish-caption">conception</div>
       </div>
-      <div class="fish-caption">'conception'</div>
     </div>
   </div>
 
@@ -227,9 +209,51 @@
     <p>&copy; u!ys</p>
   </footer>
 
-  <div class="wata-background active" id="wataBackground"></div>
+  <div class="wata-background" id="wataBackground"></div>
 
   <script src="/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const fishPhotos = document.querySelectorAll('.fish-photo');
+      const wataBackground = document.getElementById('wataBackground');
+
+      if (wataBackground) {
+        fishPhotos.forEach(photo => {
+          photo.addEventListener('mouseenter', function() {
+            wataBackground.classList.add('active');
+          });
+
+          photo.addEventListener('mouseleave', function() {
+            wataBackground.classList.remove('active');
+          });
+        });
+      }
+
+      fishPhotos.forEach(photo => {
+        const caption = photo.querySelector('.fish-caption');
+        if (caption && window.innerWidth > 768) {
+          photo.addEventListener('mousemove', function(e) {
+            const offset = 15;
+            let left = e.clientX + offset;
+            let top = e.clientY + offset;
+
+            const tooltipWidth = caption.offsetWidth || 200;
+            const tooltipHeight = caption.offsetHeight || 50;
+            
+            if (left + tooltipWidth > window.innerWidth) {
+              left = e.clientX - tooltipWidth - offset;
+            }
+            if (top + tooltipHeight > window.innerHeight) {
+              top = e.clientY - tooltipHeight - offset;
+            }
+            
+            caption.style.left = left + 'px';
+            caption.style.top = top + 'px';
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
 
