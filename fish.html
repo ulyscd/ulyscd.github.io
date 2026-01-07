@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fish.pics</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .fish-timeline {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .fish-timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: -2rem;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--beige-light), var(--beige), var(--beige-dark));
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+
+    .fish-timeline::after {
+      content: '▲';
+      position: absolute;
+      left: 50%;
+      top: -2.5rem;
+      transform: translateX(-50%);
+      color: var(--beige);
+      font-size: 1rem;
+      z-index: 0;
+      line-height: 1;
+    }
+
+    .fish-photo {
+      margin-bottom: 3rem;
+      background-color: var(--beige);
+      border-radius: 12px;
+      padding: 0.75rem;
+      box-shadow: 0 6px 16px var(--shadow);
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+      max-width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .fish-photo:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px var(--shadow-hover);
+    }
+
+    .fish-image-container {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      overflow: visible;
+      background-color: var(--off-white);
+      position: relative;
+    }
+
+    .fish-image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .fish-caption {
+      display: none;
+      position: fixed;
+      background-color: var(--beige);
+      border: 1px solid var(--beige-dark);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      font-style: italic;
+      box-shadow: 0 4px 12px var(--shadow-hover);
+      z-index: 1000;
+      pointer-events: none;
+      max-width: 200px;
+      word-wrap: break-word;
+    }
+
+    .fish-photo:hover .fish-caption {
+      display: block;
+    }
+
+    .fish-date-caption {
+      position: absolute;
+      bottom: -1.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--beige);
+      border: 1px solid var(--beige-dark);
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+      color: var(--text-dark);
+      width: 65%;
+      max-width: 200px;
+      text-align: center;
+      box-shadow: 0 2px 8px var(--shadow);
+      z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .fish-timeline {
+        padding: 2rem 1rem 3rem;
+      }
+
+      .fish-timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .fish-timeline::after {
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.875rem;
+      }
+
+      .fish-photo {
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .fish-caption {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0.5rem;
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-box">
+    <header class="header-with-profile">
+      <div class="header-content">
+        <div class="profile-frame">
+          <img src="/resources/imgs/creek.jpg" alt="Profile Picture" class="profile-pic">
+        </div>
+        <h1>ulys cd.</h1>
+      </div>
+      <nav>
+        <a href="/index.html">Home</a>
+        
+        <a href="/scholar.html">Code</a>
+
+        <a href="https://github.com/ulyscd" target="_blank" rel="noopener noreferrer">Git</a>
+
+        <a href="https://www.instagram.com/ulyscd/" target="_blank" rel="noopener noreferrer">Insta</a>
+        
+        <a href="https://www.youtube.com/@fihxing" target="_blank" rel="noopener noreferrer">Vids</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <div class="intro-wrapper">
+        <h2>fish pics.</h2>
+        <div class="intro-box">
+          <p>
+            Some memorable catches...
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="fish-timeline">
+
+    <div class="fish-photo">
+      <div class="fish-image-container">
+        <img src="/resources/fih/king.jpg" alt="Full freezer">
+        <div class="fish-caption">full freezer</div>
+        <div class="fish-date-caption">2024-01-15</div>
+      </div>
+    </div>
+
+    <div class="fish-photo">
+      <div class="fish-image-container">
+        <img src="/resources/fih/brown.jpg" alt="Pattern pic">
+        <div class="fish-caption">pattern pic</div>
+        <div class="fish-date-caption">2024-02-20</div>
+      </div>
+    </div>
+
+    <div class="fish-photo">
+      <div class="fish-image-container">
+        <img src="/resources/fih/bull.jpg" alt="Alpine bull">
+        <div class="fish-caption">alpine bull</div>
+        <div class="fish-date-caption">2024-03-10</div>
+      </div>
+    </div>
+
+    <div class="fish-photo">
+      <div class="fish-image-container">
+        <img src="/resources/fih/fallqua.jpg" alt="Chrome w/ the bro">
+        <div class="fish-caption">chrome w/ the bro</div>
+        <div class="fish-date-caption">2024-04-05</div>
+      </div>
+    </div>
+
+    <div class="fish-photo">
+      <div class="fish-image-container">
+        <img src="/resources/fih/twitch.jpg" alt="Full kipe">
+        <div class="fish-caption">full kipe</div>
+        <div class="fish-date-caption">2024-05-12</div>
+      </div>
+    </div>
+
+    <div class="fish-photo">
+      <div class="fish-image-container">
+        <img src="/resources/fih/chrome.jpg" alt="let'r g(r)o(w)">
+        <div class="fish-caption">let`r g(r)o(w)</div>
+        <div class="fish-date-caption">2024-06-18</div>
+      </div>
+    </div>
+
+    <div class="fish-photo">
+      <div class="fish-image-container">
+        <img src="/resources/fih/shad.jpg" alt="Mini tarpon">
+        <div class="fish-caption">mini tarpon</div>
+        <div class="fish-date-caption">2024-07-22</div>
+      </div>
+    </div>
+
+    <div class="fish-photo">
+      <div class="fish-image-container">
+        <img src="/resources/fih/steel.jpg" alt="Chromed steel">
+        <div class="fish-caption">chromed steel</div>
+        <div class="fish-date-caption">2024-08-30</div>
+      </div>
+    </div>
+
+    <div class="fish-photo">
+      <div class="fish-image-container">
+        <img src="/resources/fih/coho.jpg" alt="Reignited">
+        <div class="fish-caption">reignited</div>
+        <div class="fish-date-caption">2024-09-14</div>
+      </div>
+    </div>
+
+    <div class="fish-photo">
+      <div class="fish-image-container">
+        <img src="/resources/fih/origin.jpg" alt="Conception">
+        <div class="fish-caption">conception</div>
+        <div class="fish-date-caption">2024-10-01</div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="contact">
+    <p>&copy; u!ys</p>
+  </footer>
+
+  <div class="wata-background" id="wataBackground"></div>
+
+  <script src="/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const fishPhotos = document.querySelectorAll('.fish-photo');
+      const wataBackground = document.getElementById('wataBackground');
+      const timeline = document.querySelector('.fish-timeline');
+
+      function updateTimelineHeight() {
+        if (timeline && fishPhotos.length > 0) {
+          const lastPhoto = fishPhotos[fishPhotos.length - 1];
+          const timelineTop = timeline.offsetTop;
+          const lastPhotoBottom = lastPhoto.offsetTop + lastPhoto.offsetHeight;
+          const lineHeight = lastPhotoBottom - timelineTop + 2 * 16; // 2rem = 32px
+          
+          timeline.style.setProperty('--timeline-height', lineHeight + 'px');
+        }
+      }
+
+      updateTimelineHeight();
+      window.addEventListener('resize', updateTimelineHeight);
+      
+      const style = document.createElement('style');
+      style.textContent = `
+        .fish-timeline::before {
+          height: var(--timeline-height, 100%);
+        }
+      `;
+      document.head.appendChild(style);
+
+      if (wataBackground) {
+        fishPhotos.forEach(photo => {
+          photo.addEventListener('mouseenter', function() {
+            wataBackground.classList.add('active');
+          });
+
+          photo.addEventListener('mouseleave', function() {
+            wataBackground.classList.remove('active');
+          });
+        });
+      }
+
+      fishPhotos.forEach(photo => {
+        const caption = photo.querySelector('.fish-caption');
+        if (caption && window.innerWidth > 768) {
+          photo.addEventListener('mousemove', function(e) {
+            const offset = 7;
+            let left = e.clientX + offset;
+            let top = e.clientY + offset;
+
+            const tooltipWidth = caption.offsetWidth || 200;
+            const tooltipHeight = caption.offsetHeight || 50;
+            
+            if (left + tooltipWidth > window.innerWidth) {
+              left = e.clientX - tooltipWidth - offset;
+            }
+            if (top + tooltipHeight > window.innerHeight) {
+              top = e.clientY - tooltipHeight - offset;
+            }
+            
+            caption.style.left = left + 'px';
+            caption.style.top = top + 'px';
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
