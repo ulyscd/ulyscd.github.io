@@ -19,12 +19,23 @@
       content: '';
       position: absolute;
       left: 50%;
-      top: 0;
-      bottom: 0;
+      top: -2rem;
       width: 2px;
-      background: linear-gradient(to bottom, var(--matcha-light), var(--matcha), var(--matcha-light));
+      background: linear-gradient(to bottom, var(--beige-light), var(--beige), var(--beige-dark));
       transform: translateX(-50%);
       z-index: 0;
+    }
+
+    .fish-timeline::after {
+      content: '▲';
+      position: absolute;
+      left: 50%;
+      top: -2.5rem;
+      transform: translateX(-50%);
+      color: var(--beige);
+      font-size: 1rem;
+      z-index: 0;
+      line-height: 1;
     }
 
     .fish-photo {
@@ -90,6 +101,12 @@
 
       .fish-timeline::before {
         left: 1rem;
+      }
+
+      .fish-timeline::after {
+        left: 1rem;
+        transform: translateX(-50%);
+        font-size: 0.875rem;
       }
 
       .fish-photo {
@@ -216,6 +233,32 @@
     document.addEventListener('DOMContentLoaded', function() {
       const fishPhotos = document.querySelectorAll('.fish-photo');
       const wataBackground = document.getElementById('wataBackground');
+      const timeline = document.querySelector('.fish-timeline');
+
+      // Set timeline line height to end at the last photo
+      function updateTimelineHeight() {
+        if (timeline && fishPhotos.length > 0) {
+          const lastPhoto = fishPhotos[fishPhotos.length - 1];
+          const timelineTop = timeline.offsetTop;
+          const lastPhotoBottom = lastPhoto.offsetTop + lastPhoto.offsetHeight;
+          const lineHeight = lastPhotoBottom - timelineTop + 2 * 16; // 2rem = 32px
+          
+          timeline.style.setProperty('--timeline-height', lineHeight + 'px');
+        }
+      }
+
+      // Update on load and resize
+      updateTimelineHeight();
+      window.addEventListener('resize', updateTimelineHeight);
+      
+      // Add style for timeline height
+      const style = document.createElement('style');
+      style.textContent = `
+        .fish-timeline::before {
+          height: var(--timeline-height, 100%);
+        }
+      `;
+      document.head.appendChild(style);
 
       if (wataBackground) {
         fishPhotos.forEach(photo => {
