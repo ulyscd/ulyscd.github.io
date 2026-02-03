@@ -1,4 +1,3 @@
-// Toggle functionality for portfolio sections
 document.addEventListener('DOMContentLoaded', function() {
   const toggles = document.querySelectorAll('.portfolio-toggle');
   
@@ -8,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Wata.gif background effect on hover for interactive elements
   const interactiveElements = document.querySelectorAll('nav a, .profile-frame, .profile-pic, .intro-box, .columns > div, .portfolio-toggle');
   const wataBackground = document.getElementById('wataBackground');
 
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Smooth scroll behavior
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
