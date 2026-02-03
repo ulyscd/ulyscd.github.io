@@ -324,7 +324,6 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const fishPhotos = document.querySelectorAll('.fish-photo');
-      const wataBackground = document.getElementById('wataBackground');
       const timeline = document.querySelector('.fish-timeline');
 
       function updateTimelineHeight() {
@@ -348,18 +347,6 @@
         }
       `;
       document.head.appendChild(style);
-
-      if (wataBackground) {
-        fishPhotos.forEach(photo => {
-          photo.addEventListener('mouseenter', function() {
-            wataBackground.classList.add('active');
-          });
-
-          photo.addEventListener('mouseleave', function() {
-            wataBackground.classList.remove('active');
-          });
-        });
-      }
 
       fishPhotos.forEach(photo => {
         const caption = photo.querySelector('.fish-caption');

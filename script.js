@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  const interactiveElements = document.querySelectorAll('nav a, .profile-frame, .profile-pic, .intro-box, .columns > div, .portfolio-toggle');
+  const interactiveElements = document.querySelectorAll('nav a, .profile-frame, .profile-pic, .intro-box, .columns > div, .portfolio-toggle, .fish-photo');
   const wataBackground = document.getElementById('wataBackground');
 
   if (wataBackground) {
