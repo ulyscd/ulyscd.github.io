@@ -59,35 +59,6 @@ body {
   pointer-events: none;
 }
 
-.frame-embossed {
-  position: absolute;
-  bottom: 33px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.7rem;
-  color: var(--beige-dark);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  opacity: 0.6;
-  text-shadow:
-    2px 2px 0 rgba(0, 0, 0, 0.8),
-    3px 3px 4px rgba(0, 0, 0, 0.6),
-    0 0 10px rgba(0, 0, 0, 0.4);
-  pointer-events: auto;
-  z-index: 10;
-  transition: all 0.3s ease;
-  cursor: default;
-}
-
-.frame-embossed:hover {
-  opacity: 0.9;
-  transform: translateX(-50%) scale(1.05);
-  text-shadow:
-    3px 3px 0 rgba(0, 0, 0, 0.9),
-    4px 4px 6px rgba(0, 0, 0, 0.7),
-    0 0 15px rgba(0, 0, 0, 0.5);
-}
-
 /* --------------- Screen Container (CRT Filter) --------------- */
 .screen-container {
   flex: 1;
