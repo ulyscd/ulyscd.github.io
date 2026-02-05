@@ -327,13 +327,17 @@
       const timeline = document.querySelector('.fish-timeline');
 
       function updateTimelineHeight() {
-        if (timeline && fishPhotos.length > 0) {
-          const lastPhoto = fishPhotos[fishPhotos.length - 1];
-          const timelineTop = timeline.offsetTop;
-          const lastPhotoBottom = lastPhoto.offsetTop + lastPhoto.offsetHeight;
-          const lineHeight = lastPhotoBottom - timelineTop + 2 * 16; // 2rem = 32px
-          
+        if (timeline && fishPhotos.length >= 2) {
+          // Line and arrow start from the second photo from the bottom
+          const secondFromBottom = fishPhotos[fishPhotos.length - 2];
+          const secondFromBottomTop = secondFromBottom.offsetTop;
+          const rem2 = 32; // 2rem in px
+          const lineHeight = secondFromBottomTop + rem2;
+          const arrowHeight = 16; // ~1rem for ▲
+          const arrowTop = secondFromBottomTop - arrowHeight;
+
           timeline.style.setProperty('--timeline-height', lineHeight + 'px');
+          timeline.style.setProperty('--arrow-top', arrowTop + 'px');
         }
       }
 
@@ -344,6 +348,9 @@
       style.textContent = `
         .fish-timeline::before {
           height: var(--timeline-height, 100%);
+        }
+        .fish-timeline::after {
+          top: var(--arrow-top, -2.5rem);
         }
       `;
       document.head.appendChild(style);
