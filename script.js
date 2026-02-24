@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  /* Hover water GIF effect disabled for now due to clashes with other visual effects.
   const interactiveElements = document.querySelectorAll('nav a, .profile-frame, .profile-pic, .intro-box, .columns > div, .portfolio-toggle, .fish-photo');
   const wataBackground = document.getElementById('wataBackground');
 
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+  */
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

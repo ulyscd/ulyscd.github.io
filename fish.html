@@ -155,6 +155,7 @@
     <div class="tube-border"></div>
     <div class="frame-embossed">fish.pics</div>
     <div class="screen-container">
+      <div class="wata-background" id="wataBackground"></div>
       <div class="screen">
   <div class="main-box">
     <header class="header-with-profile">
@@ -318,8 +319,6 @@
     </div>
   </div>
 
-  <div class="wata-background" id="wataBackground"></div>
-
   <script src="/script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -328,14 +327,21 @@
 
       function updateTimelineHeight() {
         if (timeline && fishPhotos.length >= 2) {
-          // Line and arrow start from the second photo from the bottom
-          const secondFromBottom = fishPhotos[fishPhotos.length - 2];
-          const secondFromBottomTop = secondFromBottom.offsetTop;
-          const rem2 = 32; // 2rem in px
-          const lineHeight = secondFromBottomTop + rem2;
-          const arrowHeight = 16; // ~1rem for ▲
-          const arrowTop = secondFromBottomTop - arrowHeight;
+          // Line should begin at the second-ever (second from bottom) photo
+          const firstPhoto = fishPhotos[0]; // most recent (top) photo
+          const secondFromBottom = fishPhotos[fishPhotos.length - 2]; // second-ever photo (just above the very bottom)
 
+          const firstTop = firstPhoto.offsetTop;
+          const secondFromBottomBottom = secondFromBottom.offsetTop + secondFromBottom.offsetHeight;
+
+          const marginAboveFirst = 32; // 2rem in px
+          const lineTop = firstTop - marginAboveFirst;
+          const lineHeight = secondFromBottomBottom - lineTop;
+
+          const arrowOffset = 16; // ~1rem for ▲, placed slightly above the most recent photo
+          const arrowTop = lineTop - arrowOffset;
+
+          timeline.style.setProperty('--timeline-top', lineTop + 'px');
           timeline.style.setProperty('--timeline-height', lineHeight + 'px');
           timeline.style.setProperty('--arrow-top', arrowTop + 'px');
         }
@@ -347,6 +353,7 @@
       const style = document.createElement('style');
       style.textContent = `
         .fish-timeline::before {
+          top: var(--timeline-top, -2rem);
           height: var(--timeline-height, 100%);
         }
         .fish-timeline::after {
